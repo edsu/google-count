@@ -1,19 +1,12 @@
 #!/usr/bin/env python
 
-"""
-Prints out the current time and the number of google hits for a particular 
-domain.  Suitable for running from cron, like this example to count every hour
-
-0 * * * * /home/ed/Projects/google-count/google-count id.loc.gov >> /home/ed/Projects/google-count/id.loc.gov
-"""
-
 import re
 import sys
 import urllib2
 import datetime
 
 if len(sys.argv) != 2:
-    print "usage: count.py domain"
+    print "usage: google-count example.com"
     sys.exit(1)
 
 domain = sys.argv[1]
